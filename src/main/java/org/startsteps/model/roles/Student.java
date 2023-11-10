@@ -3,10 +3,6 @@ package org.startsteps.model.roles;
 import org.startsteps.model.user.User;
 import org.startsteps.model.user.UserRole;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
 public class Student extends User {
     private int id;
     private String name;
