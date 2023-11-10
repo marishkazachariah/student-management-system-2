@@ -1,8 +1,8 @@
 package org.startsteps.controller.user;
 
 import org.startsteps.controller.cli.CLI;
-import org.startsteps.model.roles.Admin;
-import org.startsteps.model.roles.Teacher;
+import org.startsteps.model.role.Admin;
+import org.startsteps.model.role.Teacher;
 import org.startsteps.model.user.User;
 import org.startsteps.model.user.UserRole;
 
