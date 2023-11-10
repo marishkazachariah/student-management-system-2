@@ -5,7 +5,7 @@ import org.startsteps.model.role.Student;
 
 import java.util.*;
 
-public class Course{
+public class Course {
     private final int courseID;
     private String courseName;
     private final List<Student> enrolledStudents;

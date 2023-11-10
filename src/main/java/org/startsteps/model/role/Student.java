@@ -1,6 +1,6 @@
 package org.startsteps.model.role;
 
-import org.startsteps.controller.course.CourseRepo;
+import org.startsteps.controller.course.CourseInterface;
 import org.startsteps.model.course.Course;
 import org.startsteps.model.user.User;
 import org.startsteps.model.user.UserRole;
@@ -13,9 +13,9 @@ public class Student extends User {
     private String name;
     private int age;
     private List<Course> courses;
-    private CourseRepo courseRepo;
+    private CourseInterface courseRepo;
 
-    public Student(String username, String password, int id, String name, int age, CourseRepo courseRepository) {
+    public Student(String username, String password, int id, String name, int age, CourseInterface courseRepository) {
         super(username, password, UserRole.STUDENT);
         this.id = id;
         this.name = name;

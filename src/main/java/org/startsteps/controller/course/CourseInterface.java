@@ -6,7 +6,7 @@ import org.startsteps.model.role.Student;
 
 import java.util.List;
 
-public interface CourseRepo extends CRUD<Course> {
+public interface CourseInterface extends CRUD<Course> {
     List<Course> getAllCourses();
     void enrollStudentInCourse(Student student, Course course);
     List<Course> searchCourses(String searchTerm);

@@ -8,10 +8,10 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
-public class CourseRepoManager implements CourseRepo {
+public class CourseManager implements CourseInterface {
     private final List<Course> courses;
 
-    public CourseRepoManager(List<Course> courses) {
+    public CourseManager(List<Course> courses) {
         this.courses = courses;
     }
 
