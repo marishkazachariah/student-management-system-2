@@ -36,16 +36,16 @@ class CLIManager {
             switch (menuOption) {
                 case REGISTER -> {
                     System.out.println("register user");
-//                    userAuthentication.registerUser();
+                    userAuthentication.register();
                 }
                 case LOGIN -> {
                     System.out.println("login user");
-//                    if (userAuthentication.login()) {
-//                        userSession.setLoggedIn(true);
-//                        System.out.println("Login successful!");
-//                    } else {
-//                        System.out.println("Login failed. Please try again.");
-//                    }
+                    if (userAuthentication.login()) {
+                        userSession.setLoggedIn(true);
+                        System.out.println("Login successful!");
+                    } else {
+                        System.out.println("Login failed. Please try again.");
+                    }
                 }
                 case STUDENT_INFORMATION -> {
                     if (userSession.isLoggedIn()) {

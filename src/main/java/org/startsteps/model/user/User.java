@@ -34,4 +34,8 @@ public class User {
     public void setRole(UserRole role) {
         this.role = role;
     }
+
+    public void displayRoleSpecificMenu() {
+        System.out.println("Welcome " + username + "!");
+    }
 }
