@@ -1,1 +1,2 @@
 maryk,password,STUDENT
+123456,1234567,TEACHER

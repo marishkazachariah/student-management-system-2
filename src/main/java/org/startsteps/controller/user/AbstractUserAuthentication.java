@@ -5,7 +5,7 @@ import org.startsteps.model.user.UserRole;
 
 import java.util.Map;
 
-abstract class AbstractUserAuthentication implements UserAuthenticationInterface {
+public abstract class AbstractUserAuthentication implements UserAuthenticationInterface {
     protected Map<String, User> userDatabase;
 
     protected AbstractUserAuthentication(Map<String, User> userDatabase) {
