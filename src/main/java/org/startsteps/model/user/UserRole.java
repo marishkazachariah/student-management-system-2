@@ -1,4 +1,4 @@
-package org.startsteps.model;
+package org.startsteps.model.user;
 
 public enum UserRole {
     ADMIN("Admin"),

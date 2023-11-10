@@ -1,4 +1,4 @@
-package org.startsteps.model;
+package org.startsteps.model.user;
 
 public class User {
     private String username;
@@ -33,5 +33,9 @@ public class User {
 
     public void setRole(UserRole role) {
         this.role = role;
+    }
+
+    public void displayRoleSpecificMenu() {
+        System.out.println("Welcome " + username + "!");
     }
 }
