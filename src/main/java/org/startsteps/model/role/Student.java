@@ -9,19 +9,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Student extends User {
-    private int id;
-    private String name;
+    private final int id;
+    private final String name;
     private int age;
     private List<Course> courses;
-    private CourseInterface courseRepo;
+    private CourseInterface courseInterface;
 
-    public Student(String username, String password, int id, String name, int age, CourseInterface courseRepository) {
+    public Student(String username, String password, int id, String name, int age, CourseInterface courseInterface) {
         super(username, password, UserRole.STUDENT);
         this.id = id;
         this.name = name;
         this.age = age;
         this.courses = new ArrayList<>();
-        this.courseRepo = courseRepository;
+        this.courseInterface = courseInterface;
     }
 
     public int getId() {
@@ -38,22 +38,6 @@ public class Student extends User {
 
     public List<Course> getCourses() {
         return courses;
-    }
-
-    public void enrollInCourse(Course course) {
-        courseRepo.enrollStudentInCourse(this, course);
-    }
-
-    public void editCourse(int courseId) {
-        courseRepo.edit(courseId);
-    }
-
-    public void displayEnrolledCourses() {
-        System.out.println("Courses enrolled in:");
-        for (Course course : courses) {
-            System.out.println("Course name: " + course.getCourseName());
-            System.out.println("Course ID: " + course.getCourseID());
-        }
     }
 
     @Override
