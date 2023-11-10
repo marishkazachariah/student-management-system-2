@@ -1,4 +1,4 @@
-package org.startsteps.model;
+package org.startsteps.model.user;
 
 public class User {
     private String username;

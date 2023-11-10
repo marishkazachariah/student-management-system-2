@@ -1,10 +1,10 @@
-package org.startsteps.controller;
+package org.startsteps.controller.user;
 
-import org.startsteps.model.User;
+import org.startsteps.model.user.User;
 
-public class UserManager extends AbstractUserManager {
+public class UserAuthentication extends AbstractUserAuthentication {
     @Override
-    public boolean registerUser(User user) {
+    public boolean register(User user) {
         if (userDatabase.containsKey(user.getUsername())) {
             System.out.println("Username: " + user.getUsername() + " already exists. Please choose another one.");
             return false;
@@ -16,7 +16,7 @@ public class UserManager extends AbstractUserManager {
     }
 
     @Override
-    public boolean loginUser(String username, String password) {
+    public boolean login(String username, String password) {
         if (userDatabase.containsKey(username) && userDatabase.get(username).getPassword().equals(password)) {
             System.out.println("Login successful. Welcome, " + username + "!");
             return true;
