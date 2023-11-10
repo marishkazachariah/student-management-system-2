@@ -1,4 +1,4 @@
-package org.startsteps.model.roles;
+package org.startsteps.model.role;
 
 import org.startsteps.model.user.User;
 import org.startsteps.model.user.UserRole;
