@@ -1,5 +1,6 @@
 package org.startsteps.controller.user;
 
+import org.startsteps.annotations.MethodMetadata;
 import org.startsteps.model.user.User;
 import org.startsteps.model.user.UserRole;
 
@@ -9,6 +10,7 @@ import java.util.Map;
 public class UserDataManager {
     private static final String FILE_PATH = "src/main/java/org/startsteps/user_data.txt";
 
+    @MethodMetadata(description = "Method to save a user into a text file")
     public void saveUserData(User user) {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(FILE_PATH, true))) {
             bufferedWriter.write(user.getUsername() + "," + user.getPassword() + "," + user.getRole().toString());
@@ -18,6 +20,7 @@ public class UserDataManager {
         }
     }
 
+    @MethodMetadata(description = "Method to load the user database from a text file")
     public void loadUserData(Map<String, User> userDatabase) {
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader("src/main/java/user_data.txt"))) {
             String line;
